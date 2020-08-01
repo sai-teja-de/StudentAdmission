@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Form</title>
+    <link rel="stylesheet" type="text/css" href="styles/form.css" />
+  </head>
+  <nav>
+    <ul>
+      <li><a href="./index.html">Results</a></li>
+      <li><a href="./form.html">Registration</a></li>
+    </ul>
+  </nav>
+  <body>
+    <h1 style="text-align: center;">Admission Form</h1>
+    <form class="reg-form">
+      <p class="helper-text">* denotes a required field</p>
+      <div class="field-row">
+        <label class="form-label" for="firstName">First name</label>
+        <input
+          type="text"
+          id="firstName"
+          class="field text-field first-name-field"
+          maxlength="20"
+          required
+        />
+        <span class="message"></span>
+      </div>
+      <div class="field-row">
+        <label class="form-label cf" for="lastName">Last name</label>
+        <input
+          type="text"
+          id="lastName"
+          class="field text-field last-name-field"
+          maxlength="20"
+          required
+        />
+        <span class="message"></span>
+      </div>
+      <div class="field-row">
+        <label class="form-label" for="class">Class</label>
+        <input
+          type="text"
+          id="tel"
+          class="field text-field class-field"
+          required
+        />
+        <span class="message"></span>
+      </div>
+      <div class="field-row">
+        <label class="form-label">Year of Passing</label>
+        <select class="form-dropdown field" id="years"> </select>
+      </div>
+      <div class="field-row">
+        <label class="form-label" for="hs">Percentage</label>
+        <input
+          type="number"
+          id="hs"
+          class="field text-field percentage-field"
+          required
+        />
+        <span class="message"></span>
+      </div>
+      <div class="field-row">
+        <label class="form-label"></label>
+        <button class="form-button">Register</button>
+      </div>
+    </form>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>
+    let LimitYear = 2017,
+      options = "";
+    for (let Y = LimitYear; Y >= 1990; Y--) {
+      options += "<option>" + Y + "</option>";
+    }
+    $("#years").append(options);
+  </script>
+  >
+</html>
