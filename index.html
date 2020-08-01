@@ -21,13 +21,14 @@
   </nav>
 
   <body>
+    <h1 style="text-align: center;">Students Results Board</h1>
     <table class="table table-striped">
       <thead>
         <tr class="bg-info">
-          <th id="name">Name</th>
-          <th id="rn">rollNumber</th>
-          <th id="marks">Marks</th>
-          <th id="status">Status</th>
+          <th data-column="name" data-order="desc">Name</th>
+          <th data-column="rollN" data-order="desc">rollNumber</th>
+          <th data-column="marks" data-order="desc">Marks</th>
+          <th data-column="status" data-order="desc">Status</th>
         </tr>
       </thead>
       <tbody id="myTable"></tbody>
